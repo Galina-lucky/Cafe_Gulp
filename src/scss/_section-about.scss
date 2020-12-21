@@ -1,0 +1,58 @@
+.section-about {
+  background-color: #00aeae;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__info {
+    margin-bottom: 0;
+
+    @media (min-width: $screen-xlg-min) {
+      padding-left: 70px;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+      display: block;
+      margin-left: 0;
+      filter: drop-shadow(-17px 9px 20px rgba(0, 0, 0, 0.3));
+    }
+
+    @media (min-width: $screen-md-min) {
+      margin-left: 12px;
+    }
+  }
+}
+
+.row-flex {
+  display: block;
+
+  @media (min-width: $screen-md-min) {
+    display: flex;
+  }
+}
+
+.col-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

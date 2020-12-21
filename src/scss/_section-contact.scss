@@ -1,0 +1,117 @@
+.section-contact {
+  background-color: #edeef0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }  
+
+  @media (min-width: $screen-md-min) {
+    background: url(/img/bg-contact.jpg) center center no-repeat;
+    background-size: cover;    
+    padding-top: 85px;
+    padding-bottom: 115px;
+  }
+}
+
+.form-contact {
+  width: 100%;
+  font-size: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: 450px;
+  }
+
+  @media (min-width: $screen-xlg-min) {
+    width: 500px;
+  }
+
+  &__field {
+    width: 100%;
+    background-color: #00c4c4;
+    font-size: 0.9375rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.5625;
+    padding: 14px 20px;
+    border: none;
+    border-left: 3px solid transparent; 
+    outline: none;
+  }
+
+  &__field:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__field:focus {
+    border-left: 3px solid #355b82;
+  }
+
+  &__field:hover {
+    background-color: #1de2e2;
+  }
+
+  &__field:active {
+    background-color: #05a2a2;
+  }
+
+  &__field::placeholder {
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  &__field--large {
+    height: 200px;
+    resize: none;
+  }
+}
+
+.contact {
+  padding-left: 0;
+
+  @media (min-width: $screen-lg-min) {
+    padding-left: 50px;
+  }
+
+  @media (min-width: $screen-xlg-min) {
+    padding-left: 70px;
+  }
+
+  &__block:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1,470588;
+  }
+
+  &__lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+}
+
+.link-contact {
+
+  &:hover {
+    color: #161cdc;
+  }
+
+  &:active {
+    color: #06b3b3;
+  }
+
+  &:focus {
+    color: #3906b3;
+  }
+}
