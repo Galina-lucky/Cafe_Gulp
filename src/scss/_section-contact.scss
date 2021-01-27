@@ -1,5 +1,5 @@
 .section-contact {
-  background-color: #edeef0;
+  background-color: map-get($mapColorBgSection, contact);
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -35,15 +35,29 @@
 
   &__field {
     width: 100%;
-    background-color: #00c4c4;
-    font-size: 0.9375rem;
-    color: #ffffff;
-    font-weight: 700;
+    background-color: $bg-color-form;
+    font-size: $font-size-form;
+    color: $font-color-secondary;
     line-height: 1.5625;
     padding: 14px 20px;
     border: none;
     border-left: 3px solid transparent; 
     outline: none;
+  }
+
+  &__field::placeholder {
+    color: $font-color-secondary;
+    font-weight: 300;
+  }  
+
+  &__field--large {
+    font-family: $font-family-base;
+    height: 200px;
+    resize: none;
+
+    &::placeholder {
+      font-weight: 400;
+    }  
   }
 
   &__field:not(:last-child) {
@@ -55,21 +69,13 @@
   }
 
   &__field:hover {
-    background-color: #1de2e2;
+    @media (min-width: $screen-md-min) {
+      background-color: lighten($bg-color-form, 7);
+    }    
   }
 
   &__field:active {
-    background-color: #05a2a2;
-  }
-
-  &__field::placeholder {
-    color: #ffffff;
-    font-weight: 300;
-  }
-
-  &__field--large {
-    height: 200px;
-    resize: none;
+    background-color: darken($bg-color-form, 7);
   }
 }
 
@@ -89,13 +95,12 @@
   }
 
   &__title {
-    font-size: 1.0625rem;
-    font-weight: 700;
+    font-size: $font-size-md;
     line-height: 1,470588;
   }
 
   &__lead {
-    font-size: 1.25rem;
+    font-size: $font-size-lg;
     font-weight: 300;
     line-height: 1.25;
   }
@@ -103,15 +108,17 @@
 
 .link-contact {
 
+  &:focus {
+    color: $bg-color-form;
+  }
+
   &:hover {
-    color: #161cdc;
+    @media (min-width: $screen-md-min) {
+      color: $bg-color-form;
+    }
   }
 
   &:active {
-    color: #06b3b3;
-  }
-
-  &:focus {
-    color: #3906b3;
+    color: darken($bg-color-form, 7);
   }
 }

@@ -1,12 +1,22 @@
 .nav {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 100%;
+  border: none;
+  transform: translateY(15px);
+  z-index: 9999;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 
-  @media (max-width: $screen-sm-max) {
-    flex-direction: column;
-    align-items: flex-end;
+  @media (min-width: $screen-md-min) {
+    transform: translateY(45px);
+  }
+
+  &--fixed {     
+    transform: translateY(0);
+    background-color: rgba(249, 249, 251, 0.9);     
   }
 
   &__header {
@@ -22,13 +32,33 @@
   }
 }
 
-  .logo {
-    display: inline-block;
+.logo {
+  display: inline-block;
 
-    &--small {
-      width: 64px;
-      height: 26px;
+  &:focus {
+    outline: 1px dotted $outline-color;
+  }
+
+  &__img {
+    @media (max-width: $screen-sm-max) {
+      width: 85%;
     }
+  }
+
+  &--small {
+    width: 64px;
+    height: 26px;
+
+    &:focus {
+      outline: 1px dotted $bg-color-primary;
+    }
+  } 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
@@ -51,7 +81,7 @@
     width: 100%;
     margin-top: 5px;
     background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
+    color: $font-color-secondary;
     border-radius: 10px;
     opacity: 0;
     transform: translateY(calc(-100% - 72px));
@@ -64,71 +94,75 @@
     transition: opacity ease 0.3s, transform ease 0.3s;
   }
 
- &__item {
-  &:not(:last-child) {
-    @media (max-width: $screen-sm-max) {
-      border-bottom: 1px solid;
+  &__item {
+    &:not(:last-child) {
+      @media (max-width: $screen-sm-max) {
+        border-bottom: 1px solid;
+      }
     }
   }
-}
 
-&__link {
-  position: relative;
-  display: block;
-  padding: 7px 19px;
-  font-weight: bold;
-  line-height: 1.526‬;
-  text-transform: uppercase;
-
-  @media (max-width: $screen-md-max) {
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-
-  @media (max-width: $screen-sm-max) {
-    color: #fff;
-  }
-
-  &:before {
+  &__link {
+    position: relative;
     display: block;
-    content: "";
-    position: absolute;
-    left: 19px;
-    top: 0; 
-    height: 3px;
-    width: 0;
-    background-color: transparent;
-    transition: 0.5s ease-in-out width, 0.5s ease-in-out background-color, 0.5s ease-in-out color;
+    padding: 7px 19px;
+    font-weight: bold;
+    line-height: 1.526;
+    text-transform: uppercase;
 
     @media (max-width: $screen-md-max) {
-      left: 12px;
+      padding-right: 12px;
+      padding-left: 12px;
     }
 
     @media (max-width: $screen-sm-max) {
-      content: none;
-    }
-  }
-
-  &:hover:before {
-    background-color: #ff6033;
-
-    @media (min-width: $screen-md-min) {
-      width: calc(100% - 24px);
+      color: $font-color-secondary;
     }
 
-    @media (min-width: $screen-lg-min) {
-      width: calc(100% - 38px);
+    &--active {
+      color: #8C0505;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 19px;
+      top: 0; 
+      height: 3px;
+      width: 0;
+      background-color: transparent;
+      transition: 0.5s ease-in-out width, 0.5s ease-in-out background-color, 0.5s ease-in-out color;
+
+      @media (max-width: $screen-md-max) {
+        left: 12px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        content: none;
+      }
+    }
+
+    &:hover:before {
+      background-color: #ff6033;
+
+      @media (min-width: $screen-md-min) {
+        width: calc(100% - 24px);
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: calc(100% - 38px);
+      }
+    }
+
+    &:focus {
+      color: #8C0505;
+    }
+
+    &:active {
+      color: #ff6033;
     }
   }
-
-  &:focus {
-    color: #8C0505;
-  }
-
-  &:active {
-    color: #ff6033;
-  }
-}
 }
 
 .btn-toggle-menu {
@@ -139,7 +173,7 @@
     width: 45px;
     height: 45px;
     padding: 5px;
-    border: 2px solid #ff6033;
+    border: 2px solid $color-btn-toggle-menu;
     border-radius: 10px;
     background-color: transparent;
   }
@@ -150,7 +184,7 @@
     width: 100%;
     height: 3px;
     font-size: 0;
-    background-color: #ff6033;
+    background-color: $color-btn-toggle-menu;
 
     &::after {
       content: '';
@@ -159,7 +193,7 @@
       top: -10px;
       width: 100%;
       height: 3px;
-      background-color: #ff6033;
+      background-color: $color-btn-toggle-menu;
     }
 
     &::before {
@@ -169,7 +203,11 @@
       bottom: -10px;
       width: 100%;
       height: 3px;
-      background-color: #ff6033;
+      background-color: $color-btn-toggle-menu;
     }
+  }
+
+  &:focus {
+    outline: 1px dotted $outline-color;
   }
 }

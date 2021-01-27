@@ -1,6 +1,6 @@
 .section-services {
-  background-color: #70bfff;
-  color: #ffffff;
+  background-color: map-get($mapColorBgSection, services);
+  color: $font-color-secondary;
   padding-top: 50px;
   padding-bottom: 50px; 
 
@@ -51,8 +51,8 @@
     @media (min-width: $screen-md-min) {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       right: 0;
+      transform: translateY(-50%);
     }
 
     @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {

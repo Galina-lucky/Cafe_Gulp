@@ -1,21 +1,77 @@
-
-$dark-grey: #262626;
+$WHITE: #fff;
+$DARK-GREY: #262626;
+$GREEN: #96b92c;
+$ORANGE: #ff6033;
 
 $font-family-base: 'Raleway', Helvetica, Arial, sans-serif;
 $line-height: 1.6875;
 
 $base-font-size: 16px;
 
-$font-color-primary: $dark-grey;
+$font-size-h1: 60px;
+$font-size-h2: 90px;
+$font-size-xlg: 44px;
+$font-size-lg: 20px;
+$font-size-md: 17px;
+$font-size-sm: 11px;
 
-$screen-xlg-min: 1200px;
-$screen-lg-min: 992px;
-$screen-md-min: 768px;
-$screen-sm-min: 576px;
-$screen-xs-min: 320px;
+$font-size-form: 15px;
 
+// Font color
+$font-color-primary: $DARK-GREY;
+$font-color-secondary: $WHITE;
 
-$screen-lg-max: $screen-xlg-min - 1px;
-$screen-md-max : $screen-lg-min - 1px;
-$screen-sm-max : $screen-md-min - 1px;
-$screen-xs-max : $screen-sm-min - 1px;
+// Background color
+$bg-color-primary: $WHITE;
+$bg-color-footer: $DARK-GREY;
+$bg-color-form: #00c4c4;
+
+$color-btn-toggle-menu: $ORANGE;
+$color-link-autor: #f12b55;
+$outline-color: $DARK-GREY;
+
+// Subscription form colors
+$mapColorBorderFormSupscribe: ( 
+  border: $DARK-GREY,
+  outline: $GREEN,
+  );
+
+// Map. List of section background colors
+$mapColorBgSection: (
+  about: #00aeae, 
+  blog: #b07cf7, 
+  contact: $GREEN, 
+  gallery: #ffe92f,
+  services: #70bfff,
+  subscribe: $WHITE,
+);
+
+// Map. List of button background colors
+$MapColorBgControls: (
+  1: $ORANGE, 
+  2: #5585a2, 
+  3: $GREEN, 
+  4: #f72b3f,
+  for-form: $bg-color-form,
+);
+
+//Breakpoints
+$screen-xs:                  320px;
+$screen-xs-min:              $screen-xs;
+
+$screen-sm:                  576px;
+$screen-sm-min:              $screen-sm;
+
+$screen-md:                  768px;
+$screen-md-min:              $screen-md;
+
+$screen-lg:                  992px;
+$screen-lg-min:              $screen-lg;
+
+$screen-xlg:                 1200px;
+$screen-xlg-min:             $screen-xlg;
+
+$screen-xs-max:              ($screen-sm-min - 1); // до 575
+$screen-sm-max:              ($screen-md-min - 1); // до 767
+$screen-md-max:              ($screen-lg-min - 1); // до 991
+$screen-lg-max:              ($screen-xlg-min - 1); // до 1199

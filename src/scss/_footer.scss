@@ -1,5 +1,5 @@
 .footer {
-  background-color: #262626;
+  background-color: $bg-color-footer;
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -24,8 +24,8 @@
 
   &__site-author {
     margin-bottom: 10px;
-    font-size: 11px;
-    color: #ffffff;
+    font-size: $font-size-sm;
+    color: $font-color-secondary;
     font-weight: 300;
     line-height: 1.666666;
     text-align: left;
@@ -45,31 +45,32 @@
   }
 
   &__link-author {
-    color: #f12b55;
-    font-weight: 700;
+    color: $color-link-autor;
 
     &:focus {
-      color: lighten(#f12b55, 20);
-      outline: 1px solid #f12b55;
+      color: lighten($color-link-autor, 20);
+      outline: 1px solid $color-link-autor;
     }
 
     &:hover {
-      color: lighten(#f12b55, 20);
-      outline: 1px solid #f12b55;
+      @media (min-width: $screen-md-min) {
+        color: lighten($color-link-autor, 20);
+        outline: 1px solid $color-link-autor;
+      }
     }
 
     &:active {
-      color: darken(#f12b55, 20);
+      color: darken($color-link-autor, 20);
     }
 
     &:visited {
-      color: #6600db;
+      color: darken($color-link-autor, 30);;
     }
   }
 
   &__copyright {
-    font-size: 11px;
-    color: #ffffff;
+    font-size: $font-size-sm;
+    color: $font-color-secondary;
     font-weight: 300;
     line-height: 1.5625;
 
@@ -82,7 +83,7 @@
     }
 
     @media (min-width: $screen-lg-min) {
-      font-size: 1rem;
+      font-size: $base-font-size;
     }
   }
 }

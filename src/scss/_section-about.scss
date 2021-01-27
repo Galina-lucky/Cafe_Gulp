@@ -1,6 +1,6 @@
 .section-about {
-  background-color: #00aeae;
-  color: #ffffff;
+  background-color: map-get($mapColorBgSection, about);
+  color: $font-color-secondary;
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -41,18 +41,3 @@
     }
   }
 }
-
-.row-flex {
-  display: block;
-
-  @media (min-width: $screen-md-min) {
-    display: flex;
-  }
-}
-
-.col-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-

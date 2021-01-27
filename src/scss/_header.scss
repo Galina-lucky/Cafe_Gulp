@@ -1,6 +1,6 @@
 .header {
-  padding-top: 47px;
-  padding-bottom: 60px;
+  padding-top: 355px;
+  padding-bottom: 50px;
   background-color: #f9f9fb;
   position: relative;
 
@@ -11,23 +11,20 @@
   }
 
   @media (max-width: $screen-sm-max) {
-    padding-top: 15px;
+    padding-top: 225px;
+    padding-bottom: 125px;
   }
 
-  &__info {
-    margin-top: 60px;
-    margin-bottom: 30px;
-
-    @media (min-width: $screen-md-min) {
-      margin-top: 255px;
-    }
+  @media (max-width: $screen-xs-max) {
+    padding-top: 150px;
+    padding-bottom: 50px;
   }
 
   &__title {
-    font-size: 2.75rem;
+    font-size: $font-size-xlg;
 
     @media (min-width: $screen-sm-min) {
-      font-size: 3.75rem;
+      font-size: $font-size-h1;
     }
   }
 }

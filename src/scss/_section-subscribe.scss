@@ -1,5 +1,5 @@
 .section-subscribe {
-  background-color: #fff;
+  background-color: map-get($mapColorBgSection, subscribe);
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -32,10 +32,10 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 32px;
 
     @media (min-width: $screen-sm-min) {
-      font-size: 2.5rem;
+      font-size: 40px;
     }
   }
 }
@@ -46,21 +46,27 @@
     width: 100%;
     margin-bottom: 15px;
     padding: 12px 12px;
-    font-size: 0.9375rem;
+    font-size: $font-size-form;
     font-weight: 300;
     line-height: 1.8;
-    border: #262626 solid 1px;
+    border: map-get($mapColorBorderFormSupscribe, border) solid 1px;
     outline-color: transparent; 
     
     &:focus {
-      outline: #ccf15b solid 3px;
+      outline: lighten(map-get($mapColorBorderFormSupscribe, outline), 10) solid 3px;
+      border-color: lighten(map-get($mapColorBorderFormSupscribe, border), 40);
     }
 
     &:hover {
-      outline: #96b92c solid 3px;
+      @media (min-width: $screen-md-min) {
+        outline: map-get($mapColorBorderFormSupscribe, outline) solid 3px;
+        border-color: lighten(map-get($mapColorBorderFormSupscribe, border), 40);
+      }
     }
+
     &:active {
-      outline: #7d9c1f solid 3px;
+      outline: darken(map-get($mapColorBorderFormSupscribe, outline), 10) solid 3px;
+      border-color: lighten(map-get($mapColorBorderFormSupscribe, border), 40);
     }
 
     @media (min-width: $screen-md-min) {

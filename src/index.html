@@ -12,55 +12,59 @@
         <link href="/css/main.min.css" rel="stylesheet"/>
     </head>
     <body>
-        <header class="header">
-            <div class="container">
-                <nav class="nav">
-                    <div class="nav__header">
-                        <a class="logo nav__logo" href="#">
-                            <img class="img-responsive" src="img/logo.svg" alt="logo">
-                        </a>
-                        <button class="btn-toggle-menu js-btn-toggle-menu">
-                            <span class="btn-toggle-menu__item js-btn-toggle-menu__item">Toggle menu</span>
-                        </button>
+        <header id="home" class="header" >
+            <nav class="nav js-nav">
+                <div class="container">
+                    <div class="navbar">
+                        <div class="nav__header">
+                            <a class="logo nav__logo" href="#">
+                                <img class="img-responsive logo__img" src="img/logo.svg" alt="logo">
+                            </a>
+                            <button class="btn-toggle-menu js-btn-toggle-menu">
+                                <span class="btn-toggle-menu__item js-btn-toggle-menu__item">Toggle menu</span>
+                            </button>
+                        </div>                   
+                        <ul class="menu nav__menu js-menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#home">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#about">
+                                    About
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#services">
+                                    Services
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#gallery">
+                                    Gallery
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#blog">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#contact">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
                     </div>                   
-                    <ul class="menu nav__menu js-menu">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Home</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#about">
-                                About
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#services">
-                                Services
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#gallery">
-                                Gallery
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#blog">
-                                Blog
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                </div>                
+            </nav>
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-9 col-md-6 col-lg-5 col-xlg-4 ">
-                        <div class="info header__info">
+                        <div class="info">
                             <h1 class="info__title header__title">
                                 Fresh Life
                             </h1>
-                            <p class="info__lead">
+                            <p class="info__description">
                                 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                             </p>
                         </div>
@@ -86,10 +90,10 @@
                                 <h2 class="info__title">
                                     About us
                                 </h2>
-                                <p class="info__lead">
+                                <p class="info__description">
                                     Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
                                 </p>
-                                <p class="info__lead">
+                                <p class="info__description">
                                     Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
                                 </p>
                             </div>
@@ -135,7 +139,7 @@
                                 <h2 class="info__title">
                                     Gallery
                                 </h2>
-                                <p class="info__lead">
+                                <p class="info__description">
                                     Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </p>
                             </div>
@@ -178,20 +182,20 @@
                                 <h2 class="info__title section-subscribe__title">
                                     Subscribe To Us
                                 </h2>
-                                <p class="info__lead">
+                                <p class="info__description">
                                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <form class="form-subscribe">
+                    <form class="form-subscribe" action="">
                         <div class="row">
                             <div class="col-md-8 col-lg-6">
                                 <input class="form-subscribe__field" name="user-email" placeholder="Your email address..." type="email" value="">
                                 </input>
                             </div>
                             <div class="col-md-3 col-lg-3 col-xlg-2">
-                                <button class="btn btn--third">
+                                <button class="btn btn--third" type="submit">
                                     Subscribe
                                 </button>
                             </div>
@@ -207,72 +211,66 @@
                                 <h2 class="info__title">
                                     Blog
                                 </h2>
-                                <p class="info__lead">
+                                <p class="info__description">
                                     Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="wrapper-article">
-                                <a class="article-preview" href="#">
-                                    <img class="img-responsive" src="img/img-blog1.jpg" alt="Green Smoothies">
-                                    <p class="date article-preview__date">
-                                        <span class="article-preview__day">20</span>
-                                        <span class="article-preview__month">nov</span>
-                                    </p>
-                                    <div class="article-preview__info">
-                                        <h3 class="article-preview__title">
-                                            Green Smoothies: Too Much of a Good Thing?
-                                        </h3>
-                                        <p class="article-preview__author">
-                                            By Auskteez - 2 hour
-                                        </p> 
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="col-md-6 col-lg-4">                       
+                            <a class="article-preview" href="#">
+                                <img class="img-responsive" src="img/img-blog1.jpg" alt="Green Smoothies">
+                                <p class="date article-preview__date text-centr">
+                                    <span class="article-preview__day fw-bold">20</span>
+                                    <span class="article-preview__month fw-bold">nov</span>
+                                </p>
+                                <div class="article-preview__info">
+                                    <h3 class="article-preview__title fw-bold">
+                                        Green Smoothies: Too Much of a Good Thing?
+                                    </h3>
+                                    <p class="article-preview__author">
+                                        By Auskteez - 2 hour
+                                    </p> 
+                                </div>
+                            </a>                            
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="wrapper-article">
-                                <a class="article-preview" href="#">
-                                    <img class="img-responsive" src="img/img-blog2.jpg" alt="Growing Food">
-                                    <p class="date article-preview__date">
-                                        <span class="article-preview__day">14</span>
-                                        <span class="article-preview__month">nov</span>
-                                    </p>
-                                    <div class="article-preview__info">
-                                        <h3 class="article-preview__title">
-                                            Growing Food and a "Thirst" for Innovation
-                                        </h3>
-                                        <p class="article-preview__author">
-                                            By Auskteez - 3 hour
-                                        </p> 
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="col-md-6 col-lg-4">                            
+                            <a class="article-preview" href="#">
+                                <img class="img-responsive" src="img/img-blog2.jpg" alt="Growing Food">
+                                <p class="date article-preview__date text-centr">
+                                    <span class="article-preview__day fw-bold">14</span>
+                                    <span class="article-preview__month fw-bold">nov</span>
+                                </p>
+                                <div class="article-preview__info">
+                                    <h3 class="article-preview__title fw-bold">
+                                        Growing Food and a "Thirst" for Innovation
+                                    </h3>
+                                    <p class="article-preview__author">
+                                        By Auskteez - 3 hour
+                                    </p> 
+                                </div>
+                            </a>                            
                         </div>
-                        <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-0">
-                            <div class="wrapper-article">
-                                <a class="article-preview" href="#">
-                                    <img class="img-responsive" src="img/img-blog3.jpg" alt="Pesticides & Food">
-                                    <p class="date article-preview__date">
-                                        <span class="article-preview__day">10</span>
-                                        <span class="article-preview__month">nov</span>
-                                    </p>
-                                    <div class="article-preview__info">
-                                        <h3 class="article-preview__title">
-                                            Pesticides & Food: What You Need to Know
-                                        </h3>
-                                        <p class="article-preview__author">
-                                            By Auskteez - 6 hour
-                                        </p> 
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-0">                      
+                            <a class="article-preview" href="#">
+                                <img class="img-responsive" src="img/img-blog3.jpg" alt="Pesticides & Food">
+                                <p class="date article-preview__date text-centr">
+                                    <span class="article-preview__day fw-bold">10</span>
+                                    <span class="article-preview__month fw-bold">nov</span>
+                                </p>
+                                <div class="article-preview__info">
+                                    <h3 class="article-preview__title fw-bold">
+                                        Pesticides & Food: What You Need to Know
+                                    </h3>
+                                    <p class="article-preview__author">
+                                        By Auskteez - 6 hour
+                                    </p> 
+                                </div>
+                            </a>                            
                         </div>
                     </div>
-                    <a class="btn btn--fourth btn--center" href="#">
+                    <a class="btn btn--fourth" href="#">
                         View more
                     </a> 
                 </div>
@@ -285,7 +283,7 @@
                                 <h2 class="info__title">
                                     Contact
                                 </h2>
-                                <div class="info__lead">
+                                <div class="info__description">
                                     For new projects, ideas, business or anything you'd like to discuss, contact with me!
                                 </div>
                             </div>
@@ -293,27 +291,28 @@
                     </div>
                     <div class="row">
                         <div class="col-md-7 col-lg-6">
-                            <form class="form-contact">
-                                <input class="form-contact__field" name="name" placeholder="Your name" required="" type="text" value=""></input>
-                                <input class="form-contact__field" name="email" placeholder="Your email" required="" type="email" value=""></input>
-                                <input class="form-contact__field" name="phone" type="tel" placeholder="Your telephone number" value=""></input>
-                                <textarea class="form-contact__field form-contact__field--large" name="message" placeholder="Your message..." value=""></textarea>  
+                            <form class="form-contact" action="">
+                                <input class="form-contact__field fw-bold" name="name" placeholder="Your name" required="" type="text" value=""></input>
+                                <input class="form-contact__field fw-bold" name="email" placeholder="Your email" required="" type="email" value=""></input>
+                                <input class="form-contact__field fw-bold" name="phone" type="tel" placeholder="Your telephone number" value=""></input>
+                                <textarea class="form-contact__field form-contact__field--large fw-bold" name="message" placeholder="Your message..." value=""></textarea>
+                                <button class="btn btn--for-form" type="subscribe">Send</button>
                             </form>
                         </div>
                         <div class="col-md-5 col-lg-6">
                             <div class="contact" >
                                 <address class="contact__block">
-                                    <p class="contact__title">ADDRESS</p>
+                                    <p class="contact__title fw-bold">ADDRESS</p>
                                     <p class="contact__lead">
                                     123 City name, Street, City, Country
                                     </p>
                                 </address>
                                 <address class="contact__block">
-                                    <p class="contact__title">EMAIL</p>
+                                    <p class="contact__title fw-bold">EMAIL</p>
                                     <a class="contact__lead link-contact"  href="mailto:cahee@domain.com">cahee@domain.com</a>
                                 </address>
                                 <address class="contact__block">
-                                    <p class="contact__title">PHONE</p>
+                                    <p class="contact__title fw-bold">PHONE</p>
                                     <a class="contact__lead link-contact" href="tel:+0123456789">+012 345 6789</a>
                                 </address>
                             </div>
@@ -330,7 +329,7 @@
                     </a>
                     <p class="footer__site-author">
                         Made with
-                        <a class="footer__link-author" href="#">
+                        <a class="footer__link-author fw-bold" href="#">
                             love
                         </a>
                         by Auskteez
