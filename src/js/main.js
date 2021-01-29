@@ -1,135 +1,95 @@
-;(function(){
+;(function() {
 
-  $(document).ready(function() {
+  "usestrict";
 
-    createSmoothScroll()
-    madeFixedMenu();
-    showActiveMenuItem()
-    showMobileMenu();
+  let navTop;
 
-    $(window).on('scroll', showActiveMenuItem());
+  $(document).ready( function() {
+    let menu = $('.js-menu');
+    let menuBtn = $('.js-btn-toggle-menu');
+    let menuLink = $('.menu__link');
 
-//--------------------
-/*
-  let sectionOffsetTop = [
-    $('#home').offset().top, 
-    $('#about').offset().top,
-    $('#services').offset().top,
-    $('#gallery').offset().top,
-    $('#blog').offset().top,
-    $('#contact').offset().top
-  ];
-
-  let sectionMap = {
-    "home": sectionOffsetTop[0],
-    "about": sectionOffsetTop[1],
-    "services": sectionOffsetTop[2],
-    "gallery": sectionOffsetTop[3],
-    "blog": sectionOffsetTop[4],
-    "contact": sectionOffsetTop[5],
-  };
-
-  let windowScrollPosition;
-
-  $(window).on('scroll', () => {
-    $('.menu__link--active').removeClass('menu__link--active');
+    getNavTopSize();
+    smoothScroll();
+    setMenuStiky();
+    hideMobileMenu();
     
-    windowScrollPosition = $(window).scrollTop();
-    let m = 0;
-    
-    $.each(sectionMap, function(key, value) {
-      if (windowScrollPosition > value) {
-        m = value;
-      }
-    })
+    menuBtn.on('click', function() {
+      menu.toggleClass('menu--show');
+    });
 
-    $.each(sectionMap, function(key, value) {
-      if(value == m) {
-        $('[href ="#' + key+'"]').addClass('menu__link--active');
-      }
-    })
+    menuLink.on('click', function() {
+      menu.removeClass('menu--show');
+    });
   });
-*/
-  
-    // Функция для подсветки активного пункта меню при прокрутке
-    function showActiveMenuItem(){
-      let scrollTop = $(window).scrollTop();
-      
-      $('.menu__link').each(function(){
-        let link = $(this).attr("href");
-        let target = $(link);
 
-      if ( (target.offset().top <= scrollTop) && (target.offset().top + target.outerHeight() > scrollTop) ) 
-        { $('.menu__link').removeClass("menu__link--active");
-          $(this).addClass("menu__link--active");
-        } else {
-          $(this).removeClass("menu__link--active");
-        }
-      });
-    }      
+  $(window).on('scroll', function() {
+    showActiveMenuItem();
+    setMenuStiky()
+  });
 
-    // Показывает или скрывает меню в мобильной версии
-    function showMobileMenu(){
-      let menu = $('.js-menu');
-      let menuBtn = $('.js-btn-toggle-menu');
-      let menuLink = $('.menu__link');
-      let el = $('.js-btn-toggle-menu__item');
+  $(window).on('resize', function(){
+    getNavTopSize();
 
-      menuBtn.on('click', function() {
-        menu.toggleClass('menu--show');
-      });
+    if ( $(window).width() > 767 ) {
+      $('.js-menu').removeClass('menu--show');
+    }
+  });
 
-      menuLink.on('click', function() {
+  function setMenuStiky() {
+    let nav = $('.js-nav');
+      ($(this).scrollTop() > navTop)
+        ? nav.addClass('nav--stiky')
+        : nav.removeClass('nav--stiky');
+  }
+
+
+  // Функция для подсветки активного пункта меню при прокрутке
+  function showActiveMenuItem() {
+    let scrollTop = $(window).scrollTop();
+    
+    $('.menu__link').each( function() {
+      let link = $(this).attr("href");
+      let target = $(link);
+
+      if ( (target.offset().top <= scrollTop)
+        && (target.offset().top + target.outerHeight() > scrollTop) ) {
+        $('.menu__link').removeClass("menu__link--active");
+        $(this).addClass("menu__link--active");
+      } else {
+        $(this).removeClass("menu__link--active");
+      }
+    });
+  }      
+
+  // Cкрываем меню в мобильной версии
+  function hideMobileMenu() {
+    let menu = $('.js-menu');
+    let menuBtn = $('.js-btn-toggle-menu');
+    let el = $('.js-btn-toggle-menu__item');    
+
+    $(document).click(function (e) {
+      if ( !menuBtn.is(e.target)  && !el.is(e.target)  && !menu.is(e.target) && menu.hasClass('menu--show') ) {
         menu.removeClass('menu--show');
-      });
+      };
+    });
+  }
 
-      $(document).click(function (e) {
-        if ( !menuBtn.is(e.target)  && !el.is(e.target)  && !menu.is(e.target) && menu.hasClass('menu--show') ) {
-          menu.removeClass('menu--show');
-        };
-      });
+  function getNavTopSize() {
+    let nav = $('.js-nav');
+    navTop = ($(window).width() < 768) ? 15 : 45;
+  }
 
-      $(window).resize(function() {
-        if ( $(window).width() > 767 ) {
-          $('.js-menu').removeClass('menu--show');
-        }
-      });
-    }
-
-    // Фиксирует верхнее меню
-    function madeFixedMenu() {
-      let nav = $('.js-nav');
-      let navTop;
-      getTopNav();
-
-      function getTopNav() {
-        ($(window).width() < 768)
-        ? navTop = 15
-        : navTop = 45;
-      }
-
-      $(window).on('resize', function(){
-        getTopNav()
-      });
-
-      $(window).scroll(function () {
-        ($(this).scrollTop() > navTop)
-          ? nav.addClass('nav--fixed')
-          : nav.removeClass('nav--fixed');
-      });
-    }
-
-    //Плавный скролл
-    function createSmoothScroll() {
-      $(".menu__link").click(function () {
-        elementClick = $(this).attr("href")
-        destination = $(elementClick).offset().top;
-        $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 600);
-
-        $(this).closest('.menu').find('.menu__link--active').removeClass('menu__link--active');
-        $(this).addClass('menu__link--active');
-        return false;
-      });
-    }   
-  });
+  //Плавный скролл
+  function smoothScroll() {
+    $('.menu__link').on('click', function (event) {
+      event.preventDefault();
+      elementClick = $(this).attr("href")
+      destination = $(elementClick).offset().top+1;
+      
+      $('html, body').animate({
+        scrollTop: destination
+      }, 600);
+    });
+  }
 })();

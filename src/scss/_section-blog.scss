@@ -4,14 +4,6 @@
   color: $font-color-secondary;
 }
 
-.date {
-  background-color: rgba(38, 38, 38, 0.502);
-  border-radius: 5px;
-  width: 60px;
-  line-height: 1;
-  padding: 3px 9px;
-}
-
 .article-preview {
   display: inline-block;
   position: relative;
@@ -49,6 +41,11 @@
     position: absolute;
     left: 30px;
     top:  30px;
+    border-radius: 5px;
+    width: 60px;
+    line-height: 1;
+    padding: 3px 9px;
+    background-color: rgba(38, 38, 38, 0.502);
     text-align: center;
 
     @media (min-width: $screen-md-min) {
