@@ -1,18 +1,9 @@
 .section-contact {
   background-color: map-get($mapColorBgSection, contact);
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  @media (min-width: $screen-sm-min) {
-    padding-top: 60px;
-    padding-bottom: 80px;
-  }  
-
+  
   @media (min-width: $screen-md-min) {
     background: url(/img/bg-contact.jpg) center center no-repeat;
-    background-size: cover;    
-    padding-top: 85px;
-    padding-bottom: 115px;
+    background-size: cover;
   }
 }
 
@@ -35,13 +26,14 @@
 
   &__field {
     width: 100%;
-    background-color: $bg-color-form;
-    font-size: $font-size-form;
-    color: $font-color-secondary;
-    line-height: 1.5625;
     padding: 14px 20px;
+    background-color: $bg-color-form;
     border: none;
-    border-left: 3px solid transparent; 
+    border-left: 3px solid transparent;
+    font-size: $font-size-form;
+    font-weight: bold;
+    line-height: 1.5625;
+    color: $font-color-secondary;    
     outline: none;
   }
 
@@ -70,12 +62,12 @@
 
   &__field:hover {
     @media (min-width: $screen-md-min) {
-      background-color: lighten($bg-color-form, 7);
+      background-color: lighten($bg-color-form, 7%);
     }    
   }
 
   &__field:active {
-    background-color: darken($bg-color-form, 7);
+    background-color: darken($bg-color-form, 7%);
   }
 }
 
@@ -96,6 +88,7 @@
 
   &__title {
     font-size: $font-size-md;
+    font-weight: bold;
     line-height: 1,470588;
   }
 
@@ -119,6 +112,6 @@
   }
 
   &:active {
-    color: darken($bg-color-form, 7);
+    color: darken($bg-color-form, 7%);
   }
 }

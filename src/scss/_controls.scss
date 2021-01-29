@@ -8,21 +8,24 @@
 @mixin focus-hover-active($bg-color, $font-color) {
   
   &:focus {
+    box-shadow: none;
     outline: 3px solid $bg-color;
     outline-offset: 2px;
   }
 
   @media (min-width: $screen-md-min) {
     &:hover {
-      color: darken($bg-color, 10);
+      color: darken($bg-color, 10%);
       background-color: $font-color;
+      box-shadow: none;
       outline:  3px solid $bg-color;
     }
   }
 
   &:active {
-    background-color: darken($bg-color, 10);
+    background-color: darken($bg-color, 10%);
     color: $font-color;
+    box-shadow: none;
   }
 }
 
@@ -83,25 +86,18 @@ a {
     @include focus-hover-active (map-get($MapColorBgControls, 2), $font-color-secondary);
   }
 
-  &--third {
+  &--success {
     background-color: map-get($MapColorBgControls, 3);
     color: $font-color-secondary;
 
     @include focus-hover-active (map-get($MapColorBgControls, 3), $font-color-secondary);
   }
 
-  &--fourth {
+  &--danger {
     background-color: map-get($MapColorBgControls, 4);
     color: $font-color-secondary;
 
     @include focus-hover-active (map-get($MapColorBgControls, 4), $font-color-secondary);
-  }
-
-  &--for-form {
-    background-color: map-get($MapColorBgControls, for-form);
-    color: $font-color-secondary;
-
-    @include focus-hover-active (map-get($MapColorBgControls, for-form), $font-color-secondary);
   }
 
   &--block {
@@ -161,18 +157,21 @@ a {
   }
 
   &:focus {
-    outline: #545dd6 solid 3px;
+    box-shadow: none;
+    outline: #1e8694 solid 3px;
   }
 
   &:hover {
-    @media (min-width: $screen-md-min) {
-      background-color: #c7dffb;
-      outline: #5c8ab3 solid 3px;
+    @media (min-width: $screen-md-min) {      
+      background-color: #95f0fd;
+      box-shadow: none;
+      outline: #1e8694 solid 3px;
     }
   }
 
   &:active {
-    background-color: #689fde;
+    background-color: #19c1d9;
+    box-shadow: none;
   }
 }
 

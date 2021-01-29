@@ -2,6 +2,7 @@
   background-color: $bg-color-footer;
   padding-top: 30px;
   padding-bottom: 30px;
+  color: #b9b9b9;
 
   &__group {
     display: flex;
@@ -25,7 +26,6 @@
   &__site-author {
     margin-bottom: 10px;
     font-size: $font-size-sm;
-    color: $font-color-secondary;
     font-weight: 300;
     line-height: 1.666666;
     text-align: left;
@@ -45,32 +45,33 @@
   }
 
   &__link-author {
+    font-weight: bold;
     color: $color-link-autor;
 
     &:focus {
-      color: lighten($color-link-autor, 20);
+      color: lighten($color-link-autor, 20%);
       outline: 1px solid $color-link-autor;
     }
 
     &:hover {
       @media (min-width: $screen-md-min) {
-        color: lighten($color-link-autor, 20);
+        color: lighten($color-link-autor, 20%);
         outline: 1px solid $color-link-autor;
       }
     }
 
     &:active {
-      color: darken($color-link-autor, 20);
+      color: darken($color-link-autor, 20%);
     }
 
     &:visited {
-      color: darken($color-link-autor, 30);;
+      //color: darken($color-link-autor, 30%);
+      color: green;
     }
   }
 
   &__copyright {
     font-size: $font-size-sm;
-    color: $font-color-secondary;
     font-weight: 300;
     line-height: 1.5625;
 
@@ -86,4 +87,19 @@
       font-size: $base-font-size;
     }
   }
+}
+
+
+.For_new_projects__ideas__business_or_anything_y {
+  font-size: 17px;
+  font-family: "Raleway";
+  color: rgb(38, 38, 38);
+  line-height: 1.471;
+  text-align: center;
+  position: absolute;
+  left: 449.481px;
+  top: 5626.771px;
+  width: 342px;
+  height: 41px;
+  z-index: 30;
 }

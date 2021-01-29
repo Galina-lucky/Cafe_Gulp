@@ -3,14 +3,103 @@
 }*/
 
 * {
-  scroll-behavior: smooth;
+  margin: 0;
+  box-sizing: border-box;
+
   &:focus {
     outline: none;
   }
 }
 
+:after, :before {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: $font-family-base;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $line-height;
+  color: $font-color-primary;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $screen-xlg-min) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  &--md {
+    @media (min-width: $screen-sm-min) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      padding-top: 60px;
+      padding-bottom: 70px;
+    }
+    @media (min-width: $screen-lg-min) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &--lg {
+    
+    @media (min-width: $screen-md-min) {
+      //padding-top: 70px;
+      padding-bottom: 90px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      //padding-top: 90px;
+      padding-bottom: 120px;
+    }
+
+    @media (min-width: $screen-xlg-min) {
+      //padding-top: 105px;
+      padding-bottom: 150px;
+    }
+  }
+}
+
 .info {
-  margin-bottom: 45px;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 30px;
+  }  
+
+  @media (min-width: $screen-lg-min) {
+    margin-bottom: 35px;
+  }    
+
+  @media (min-width: $screen-xlg-min) {
+    margin-bottom: 45px;
+  }
+
+  &--center {
+    text-align: center;
+  }
  
   &__description {
     line-height: 1.5882352;
@@ -31,8 +120,11 @@
   &__title {
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 16px;
     line-height: 1;
+
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
 
     @media (min-width: $screen-md-min) {
       font-size: 64px;

@@ -26,7 +26,7 @@
                         </div>                   
                         <ul class="menu nav__menu js-menu">
                             <li class="menu__item">
-                                <a class="menu__link" href="#home">Home</a>
+                                <a class="menu__link menu__link--active" href="#home">Home</a>
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link" href="#about">
@@ -74,12 +74,12 @@
                     </div>
                 </div>
                 <a class="move-to" href="#about">
-                    <img alt="" src="img/scroll.png">
+                    <img alt="move to about" src="img/scroll.png">
                 </a>
             </div>
         </header>
         <main role="main">
-            <section class="section-about" id="about">
+            <section id="about" class="section section--md section-about">
                 <div class="container">
                     <div class="row row-flex">
                         <div class="col-md-5 col-lg-6 col-flex">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-services" id="services">
+            <section id="services" class="section section--lg section-services">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-md-push-6 col-lg-7 col-lg-push-5 col-xlg-6 col-xlg-push-6">
@@ -131,11 +131,11 @@
                     </div>
                 </div>
             </section>
-            <section class="section-gallery" id="gallery">
+            <section id="gallery" class="section section-gallery">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-6 col-xlg-offset-3">
-                            <div class="section-gallery__info info info--center text-centr">
+                            <div class="info info--center">
                                 <h2 class="info__title">
                                     Gallery
                                 </h2>
@@ -169,12 +169,12 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn--secondary btn--center" href="#">
+                    <a class="btn btn--secondary" href="#">
                         View more
                     </a>                    
                 </div>
             </section>
-            <section class="section-subscribe" id="subscribe">
+            <section id="subscribe" class="section section-subscribe">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-lg-6">
@@ -191,11 +191,11 @@
                     <form class="form-subscribe" action="">
                         <div class="row">
                             <div class="col-md-8 col-lg-6">
-                                <input class="form-subscribe__field" name="user-email" placeholder="Your email address..." type="email" value="">
+                                <input class="form-subscribe__field" name="user-email" placeholder="Your email address..." required type="email" value="">
                                 </input>
                             </div>
                             <div class="col-md-3 col-lg-3 col-xlg-2">
-                                <button class="btn btn--third" type="submit">
+                                <button class="btn btn--success" type="submit">
                                     Subscribe
                                 </button>
                             </div>
@@ -203,11 +203,11 @@
                     </form>
                 </div>
             </section>
-            <section class="section-blog" id="blog">
+            <section id="blog" class="section section-blog">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-6 col-xlg-offset-3">
-                            <div class="info text-centr">
+                            <div class="info">
                                 <h2 class="info__title">
                                     Blog
                                 </h2>
@@ -221,12 +221,12 @@
                         <div class="col-md-6 col-lg-4">                       
                             <a class="article-preview" href="#">
                                 <img class="img-responsive" src="img/img-blog1.jpg" alt="Green Smoothies">
-                                <p class="date article-preview__date text-centr">
-                                    <span class="article-preview__day fw-bold">20</span>
-                                    <span class="article-preview__month fw-bold">nov</span>
+                                <p class="date article-preview__date">
+                                    <span class="article-preview__day">20</span>
+                                    <span class="article-preview__month">nov</span>
                                 </p>
                                 <div class="article-preview__info">
-                                    <h3 class="article-preview__title fw-bold">
+                                    <h3 class="article-preview__title">
                                         Green Smoothies: Too Much of a Good Thing?
                                     </h3>
                                     <p class="article-preview__author">
@@ -238,12 +238,12 @@
                         <div class="col-md-6 col-lg-4">                            
                             <a class="article-preview" href="#">
                                 <img class="img-responsive" src="img/img-blog2.jpg" alt="Growing Food">
-                                <p class="date article-preview__date text-centr">
-                                    <span class="article-preview__day fw-bold">14</span>
-                                    <span class="article-preview__month fw-bold">nov</span>
+                                <p class="date article-preview__date">
+                                    <span class="article-preview__day">14</span>
+                                    <span class="article-preview__month">nov</span>
                                 </p>
                                 <div class="article-preview__info">
-                                    <h3 class="article-preview__title fw-bold">
+                                    <h3 class="article-preview__title">
                                         Growing Food and a "Thirst" for Innovation
                                     </h3>
                                     <p class="article-preview__author">
@@ -255,12 +255,12 @@
                         <div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-0">                      
                             <a class="article-preview" href="#">
                                 <img class="img-responsive" src="img/img-blog3.jpg" alt="Pesticides & Food">
-                                <p class="date article-preview__date text-centr">
-                                    <span class="article-preview__day fw-bold">10</span>
-                                    <span class="article-preview__month fw-bold">nov</span>
+                                <p class="date article-preview__date">
+                                    <span class="article-preview__day">10</span>
+                                    <span class="article-preview__month">nov</span>
                                 </p>
                                 <div class="article-preview__info">
-                                    <h3 class="article-preview__title fw-bold">
+                                    <h3 class="article-preview__title">
                                         Pesticides & Food: What You Need to Know
                                     </h3>
                                     <p class="article-preview__author">
@@ -270,12 +270,12 @@
                             </a>                            
                         </div>
                     </div>
-                    <a class="btn btn--fourth" href="#">
+                    <a class="btn btn--danger" href="#">
                         View more
                     </a> 
                 </div>
             </section>
-           <section class="section-contact" id="contact">
+           <section id="contact" class="section section-contact">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-xlg-4 col-xlg-offset-4">
@@ -283,36 +283,36 @@
                                 <h2 class="info__title">
                                     Contact
                                 </h2>
-                                <div class="info__description">
+                                <p class="info__description">
                                     For new projects, ideas, business or anything you'd like to discuss, contact with me!
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-7 col-lg-6">
                             <form class="form-contact" action="">
-                                <input class="form-contact__field fw-bold" name="name" placeholder="Your name" required="" type="text" value=""></input>
-                                <input class="form-contact__field fw-bold" name="email" placeholder="Your email" required="" type="email" value=""></input>
-                                <input class="form-contact__field fw-bold" name="phone" type="tel" placeholder="Your telephone number" value=""></input>
-                                <textarea class="form-contact__field form-contact__field--large fw-bold" name="message" placeholder="Your message..." value=""></textarea>
-                                <button class="btn btn--for-form" type="subscribe">Send</button>
+                                <input class="form-contact__field" name="name" placeholder="Your name" required type="text" value=""></input>
+                                <input class="form-contact__field" name="email" placeholder="Your email" required type="email" value=""></input>
+                                <input class="form-contact__field" name="phone" type="tel" placeholder="Your telephone number" value=""></input>
+                                <textarea class="form-contact__field form-contact__field--large" name="message" placeholder="Your message..." value=""></textarea>
+                                <button class="btn btn--primary" type="subscribe">Send</button>
                             </form>
                         </div>
                         <div class="col-md-5 col-lg-6">
                             <div class="contact" >
                                 <address class="contact__block">
-                                    <p class="contact__title fw-bold">ADDRESS</p>
+                                    <p class="contact__title">ADDRESS</p>
                                     <p class="contact__lead">
                                     123 City name, Street, City, Country
                                     </p>
                                 </address>
                                 <address class="contact__block">
-                                    <p class="contact__title fw-bold">EMAIL</p>
+                                    <p class="contact__title">EMAIL</p>
                                     <a class="contact__lead link-contact"  href="mailto:cahee@domain.com">cahee@domain.com</a>
                                 </address>
                                 <address class="contact__block">
-                                    <p class="contact__title fw-bold">PHONE</p>
+                                    <p class="contact__title">PHONE</p>
                                     <a class="contact__lead link-contact" href="tel:+0123456789">+012 345 6789</a>
                                 </address>
                             </div>
@@ -329,7 +329,7 @@
                     </a>
                     <p class="footer__site-author">
                         Made with
-                        <a class="footer__link-author fw-bold" href="#">
+                        <a class="footer__link-author" href="#">
                             love
                         </a>
                         by Auskteez
@@ -342,5 +342,7 @@
         </footer>
 
         <script src="/js/main.min.js"></script>
+        <script src="/js/Smoth"></script>
+
     </body>
 </html>

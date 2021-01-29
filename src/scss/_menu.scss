@@ -41,7 +41,7 @@
 
   &__img {
     @media (max-width: $screen-sm-max) {
-      width: 85%;
+      width: 100px;
     }
   }
 
@@ -75,20 +75,20 @@
   @media (max-width: $screen-sm-max) {
     position: absolute;
     top: 55px;
-    left: 0;
+    right: 0;
+    max-width: 250px;
     margin-right: 0;
     flex-direction: column;
     width: 100%;
-    margin-top: 5px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: $font-color-secondary;
-    border-radius: 10px;
+    background-color: rgba(249, 249, 251, 0.9);
+    visibility: hidden;
     opacity: 0;
-    transform: translateY(calc(-100% - 72px));
+    transform: translateY(calc(-100% - 90px));
     z-index: 2;
   }
 
   &--show {
+    visibility: visible;
     opacity: 1;
     transform: translateY(0);
     transition: opacity ease 0.3s, transform ease 0.3s;
@@ -116,11 +116,11 @@
     }
 
     @media (max-width: $screen-sm-max) {
-      color: $font-color-secondary;
+      color: $font-color-primary;
     }
 
     &--active {
-      color: #8C0505;
+      color: $color-danger;
     }
 
     &:before {
@@ -143,8 +143,24 @@
       }
     }
 
-    &:hover:before {
-      background-color: #ff6033;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 19px;
+      top: 0; 
+      height: 3px;
+      width: 0;
+      background-color: $color-danger;
+      visibility: hidden;
+
+      @media (max-width: $screen-md-max) {
+        left: 12px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        content: none;
+      }
 
       @media (min-width: $screen-md-min) {
         width: calc(100% - 24px);
@@ -155,12 +171,30 @@
       }
     }
 
+    &:hover:before {
+      background-color: $color-danger;
+
+      @media (min-width: $screen-md-min) {
+        width: calc(100% - 24px);
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: calc(100% - 38px);
+      }
+    }
+
+    &:focus:after {
+      visibility: visible;
+    };
+
     &:focus {
-      color: #8C0505;
+      @media (max-width: $screen-sm-max) {
+        color: $color-danger;
+      }
     }
 
     &:active {
-      color: #ff6033;
+      color: darken($color-danger, 25%);
     }
   }
 }
@@ -208,6 +242,6 @@
   }
 
   &:focus {
-    outline: 1px dotted $outline-color;
+    box-shadow: 0px 0px 6px $color-btn-toggle-menu;
   }
 }

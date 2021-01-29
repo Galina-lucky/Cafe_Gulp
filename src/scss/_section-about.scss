@@ -1,23 +1,6 @@
 .section-about {
   background-color: map-get($mapColorBgSection, about);
   color: $font-color-secondary;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  @media (min-width: $screen-sm-min) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  @media (min-width: $screen-md-min) {
-    padding-top: 60px;
-    padding-bottom: 70px;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
 
   &__info {
     margin-bottom: 0;

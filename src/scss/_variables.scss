@@ -30,6 +30,8 @@ $color-btn-toggle-menu: $ORANGE;
 $color-link-autor: #f12b55;
 $outline-color: $DARK-GREY;
 
+$color-danger: $ORANGE;
+
 // Subscription form colors
 $mapColorBorderFormSupscribe: ( 
   border: $DARK-GREY,
@@ -40,7 +42,7 @@ $mapColorBorderFormSupscribe: (
 $mapColorBgSection: (
   about: #00aeae, 
   blog: #b07cf7, 
-  contact: $GREEN, 
+  contact: #c0dcea, 
   gallery: #ffe92f,
   services: #70bfff,
   subscribe: $WHITE,
@@ -52,7 +54,6 @@ $MapColorBgControls: (
   2: #5585a2, 
   3: $GREEN, 
   4: #f72b3f,
-  for-form: $bg-color-form,
 );
 
 //Breakpoints
