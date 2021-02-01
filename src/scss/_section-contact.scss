@@ -42,7 +42,7 @@
     font-weight: 300;
   }  
 
-  &__field--large {
+  &__field--lg {
     font-family: $font-family-base;
     height: 200px;
     resize: none;
@@ -90,6 +90,7 @@
     font-size: $font-size-md;
     font-weight: bold;
     line-height: 1,470588;
+    text-transform: uppercase;
   }
 
   &__lead {

@@ -6,14 +6,6 @@
     background: url(../img/bg-subscribe.jpg) center center no-repeat;
     background-size: cover;
   }
-
-  &__title {
-    font-size: 32px;
-
-    @media (min-width: $screen-sm-min) {
-      font-size: 40px;
-    }
-  }
 }
 
 .form-subscribe {

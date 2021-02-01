@@ -19,12 +19,4 @@
     padding-top: 120px;
     padding-bottom: 50px;
   }
-
-  &__title {
-    font-size: $font-size-xlg;
-
-    @media (min-width: $screen-sm-min) {
-      font-size: $font-size-h1;
-    }
-  }
 }

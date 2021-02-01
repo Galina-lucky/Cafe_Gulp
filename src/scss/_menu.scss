@@ -143,34 +143,6 @@
       }
     }
 
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      left: 19px;
-      top: 0; 
-      height: 3px;
-      width: 0;
-      background-color: $color-danger;
-      visibility: hidden;
-
-      @media (max-width: $screen-md-max) {
-        left: 12px;
-      }
-
-      @media (max-width: $screen-sm-max) {
-        content: none;
-      }
-
-      @media (min-width: $screen-md-min) {
-        width: calc(100% - 24px);
-      }
-
-      @media (min-width: $screen-lg-min) {
-        width: calc(100% - 38px);
-      }
-    }
-
     &:hover:before {
       background-color: $color-danger;
 
@@ -183,13 +155,12 @@
       }
     }
 
-    &:focus:after {
-      visibility: visible;
-    };
-
     &:focus {
+      outline: 1px dotted $color-danger;
+
       @media (max-width: $screen-sm-max) {
-        color: $color-danger;
+        outline: none;
+       background-color: lighten($color-danger, 30%);       
       }
     }
 

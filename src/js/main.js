@@ -2,12 +2,13 @@
 
   "usestrict";
 
+  let nav = $('.js-nav');
+  let menu = $('.js-menu');
+  let menuLink = $('.js-menu__link');
+  let menuBtn = $('.js-btn-toggle-menu');
   let navTop;
 
   $(document).ready( function() {
-    let menu = $('.js-menu');
-    let menuBtn = $('.js-btn-toggle-menu');
-    let menuLink = $('.menu__link');
 
     getNavTopSize();
     smoothScroll();
@@ -32,40 +33,45 @@
     getNavTopSize();
 
     if ( $(window).width() > 767 ) {
-      $('.js-menu').removeClass('menu--show');
+      menu.removeClass('menu--show');
     }
   });
 
+  function getNavTopSize() {
+      navTop = ($(window).width() < 768) ? 15 : 45;
+    }
+
+  // Make the main menu sticky
   function setMenuStiky() {
-    let nav = $('.js-nav');
-      ($(this).scrollTop() > navTop)
-        ? nav.addClass('nav--stiky')
-        : nav.removeClass('nav--stiky');
+    ($(this).scrollTop() > navTop)
+      ? nav.addClass('nav--stiky')
+      : nav.removeClass('nav--stiky');
   }
 
-
-  // Функция для подсветки активного пункта меню при прокрутке
+  // Function for highlighting the active menu item when scrolling
   function showActiveMenuItem() {
     let scrollTop = $(window).scrollTop();
     
-    $('.menu__link').each( function() {
+    menuLink.each( function() {
       let link = $(this).attr("href");
       let target = $(link);
 
-      if ( (target.offset().top <= scrollTop)
-        && (target.offset().top + target.outerHeight() > scrollTop) ) {
-        $('.menu__link').removeClass("menu__link--active");
+      if ( ((target.offset().top <= scrollTop)
+        && (target.offset().top + target.outerHeight() > scrollTop))
+        /*|| (scrollTop == $(document).height() - $(window).height())*/ ) {
+        menuLink.removeClass("menu__link--active");
         $(this).addClass("menu__link--active");
       } else {
         $(this).removeClass("menu__link--active");
       }
+/*      if (scrollTop == $(document).height() - $(window).height()) {
+        menuLink.last().addClass("menu__link--active")
+      }*/
     });
-  }      
+  }
 
-  // Cкрываем меню в мобильной версии
+  // Hide menu in mobile version
   function hideMobileMenu() {
-    let menu = $('.js-menu');
-    let menuBtn = $('.js-btn-toggle-menu');
     let el = $('.js-btn-toggle-menu__item');    
 
     $(document).click(function (e) {
@@ -73,16 +79,11 @@
         menu.removeClass('menu--show');
       };
     });
-  }
+  }  
 
-  function getNavTopSize() {
-    let nav = $('.js-nav');
-    navTop = ($(window).width() < 768) ? 15 : 45;
-  }
-
-  //Плавный скролл
+  //Smooth scrolling
   function smoothScroll() {
-    $('.menu__link').on('click', function (event) {
+    menuLink.on('click', function (event) {
       event.preventDefault();
       elementClick = $(this).attr("href")
       destination = $(elementClick).offset().top+1;

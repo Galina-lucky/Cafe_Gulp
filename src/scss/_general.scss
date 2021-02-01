@@ -133,5 +133,21 @@ html, body {
     @media (min-width: $screen-lg-min) {
       font-size: $font-size-h2;
     }
+
+    &--xlg {
+      font-size: $font-size-xlg;
+
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-h1;
+      }
+    }
+
+    &--sm {
+      font-size: 32px;
+
+      @media (min-width: $screen-sm-min) {
+        font-size: 40px;
+      }
+    }
   }
 }
