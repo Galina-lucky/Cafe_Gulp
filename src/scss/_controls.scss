@@ -73,31 +73,31 @@ a {
   }
 
   &--primary {
-    background-color: map-get($MapColorBgControls, 1);
+    background-color: map-get($map-color-bg-controls, 1);
     color: $font-color-secondary;
 
-    @include focus-hover-active (map-get($MapColorBgControls, 1), $font-color-secondary);    
+    @include focus-hover-active (map-get($map-color-bg-controls, 1), $font-color-secondary);    
   }
 
   &--secondary {
-    background-color: map-get($MapColorBgControls, 2);
+    background-color: map-get($map-color-bg-controls, 2);
     color: $font-color-secondary;
 
-    @include focus-hover-active (map-get($MapColorBgControls, 2), $font-color-secondary);
+    @include focus-hover-active (map-get($map-color-bg-controls, 2), $font-color-secondary);
   }
 
   &--success {
-    background-color: map-get($MapColorBgControls, 3);
+    background-color: map-get($map-color-bg-controls, 3);
     color: $font-color-secondary;
 
-    @include focus-hover-active (map-get($MapColorBgControls, 3), $font-color-secondary);
+    @include focus-hover-active (map-get($map-color-bg-controls, 3), $font-color-secondary);
   }
 
   &--danger {
-    background-color: map-get($MapColorBgControls, 4);
+    background-color: map-get($map-color-bg-controls, 4);
     color: $font-color-secondary;
 
-    @include focus-hover-active (map-get($MapColorBgControls, 4), $font-color-secondary);
+    @include focus-hover-active (map-get($map-color-bg-controls, 4), $font-color-secondary);
   }
 
   &--block {

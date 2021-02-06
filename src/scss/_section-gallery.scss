@@ -1,5 +1,5 @@
 .section-gallery {
-  background-color: map-get($mapColorBgSection, gallery);
+  background-color: map-get($map-colorbg-section, gallery);
   text-align: center;
 
   &__photos {

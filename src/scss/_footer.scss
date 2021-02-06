@@ -63,11 +63,6 @@
     &:active {
       color: darken($color-link-autor, 20%);
     }
-
-    &:visited {
-      //color: darken($color-link-autor, 30%);
-      color: green;
-    }
   }
 
   &__copyright {
@@ -84,7 +79,7 @@
     }
 
     @media (min-width: $screen-lg-min) {
-      font-size: $base-font-size;
+      font-size: $font-size-base;
     }
   }
 }

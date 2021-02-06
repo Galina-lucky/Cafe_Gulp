@@ -1,5 +1,5 @@
 .section-about {
-  background-color: map-get($mapColorBgSection, about);
+  background-color: map-get($map-colorbg-section, about);
   color: $font-color-secondary;
 
   &__info {

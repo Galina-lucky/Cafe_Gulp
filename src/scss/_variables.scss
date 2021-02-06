@@ -1,45 +1,50 @@
 $WHITE: #fff;
-$DARK-GREY: #262626;
+$DARK-GRAY: #262626;
 $GREEN: #96b92c;
 $ORANGE: #ff6033;
+$TURQUOISE: #00c4c4;
 
+$color-white: $WHITE;
+$color-dark-gray: $DARK_GRAY;
+$color-green: $GREEN;
+$color-orange: $ORANGE;
+$color-turquoise: $TURQUOISE;
+
+// Background color
+$bg-color-primary: $WHITE;
+$bg-color-footer: $DARK-GRAY;
+$bg-color-form: $TURQUOISE;
+
+// Fonts
 $font-family-base: 'Raleway', Helvetica, Arial, sans-serif;
 $line-height: 1.6875;
 
-$base-font-size: 16px;
-
+$font-size-base: 16px;
 $font-size-h1: 60px;
 $font-size-h2: 90px;
 $font-size-xlg: 44px;
 $font-size-lg: 20px;
 $font-size-md: 17px;
 $font-size-sm: 11px;
-
 $font-size-form: 15px;
 
 // Font color
-$font-color-primary: $DARK-GREY;
+$font-color-primary: $DARK_GRAY;
 $font-color-secondary: $WHITE;
 
-// Background color
-$bg-color-primary: $WHITE;
-$bg-color-footer: $DARK-GREY;
-$bg-color-form: #00c4c4;
-
+//Controls
 $color-btn-toggle-menu: $ORANGE;
-$color-link-autor: #f12b55;
-$outline-color: $DARK-GREY;
 
-$color-danger: $ORANGE;
+$color-link-autor: #f12b55;
 
 // Subscription form colors
-$mapColorBorderFormSupscribe: ( 
-  border: $DARK-GREY,
+$map-color-border-form-supscribe: ( 
+  border: $DARK-GRAY,
   outline: $GREEN,
   );
 
 // Map. List of section background colors
-$mapColorBgSection: (
+$map-colorbg-section: (
   about: #00aeae, 
   blog: #b07cf7, 
   contact: #c0dcea, 
@@ -49,7 +54,7 @@ $mapColorBgSection: (
 );
 
 // Map. List of button background colors
-$MapColorBgControls: (
+$map-color-bg-controls: (
   1: $ORANGE, 
   2: #5585a2, 
   3: $GREEN, 

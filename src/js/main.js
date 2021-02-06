@@ -37,6 +37,8 @@
     }
   });
 
+  // ------- Functions -------
+
   function getNavTopSize() {
       navTop = ($(window).width() < 768) ? 15 : 45;
     }
@@ -55,18 +57,15 @@
     menuLink.each( function() {
       let link = $(this).attr("href");
       let target = $(link);
+      $(this).blur();
 
       if ( ((target.offset().top <= scrollTop)
-        && (target.offset().top + target.outerHeight() > scrollTop))
-        /*|| (scrollTop == $(document).height() - $(window).height())*/ ) {
+        && (target.offset().top + target.outerHeight() > scrollTop))) {
         menuLink.removeClass("menu__link--active");
         $(this).addClass("menu__link--active");
       } else {
         $(this).removeClass("menu__link--active");
       }
-/*      if (scrollTop == $(document).height() - $(window).height()) {
-        menuLink.last().addClass("menu__link--active")
-      }*/
     });
   }
 
